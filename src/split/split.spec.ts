@@ -24,7 +24,7 @@ describe("split", () => {
     const { buf1 } = splitArrayBufferAt(new Uint8Array(arr), 5);
 
     expect(equal(buf1, new Uint8Array(arr))).toBe(true);
-  })
+  });
 });
 
 function uint8Array(len: number): number[] {
