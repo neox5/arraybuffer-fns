@@ -1,4 +1,4 @@
-import { equal } from ".";
+import { equal } from "./equal";
 
 describe("equal", () => {
   test("test non-equal ArrayBuffers", () => {

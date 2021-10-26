@@ -1,5 +1,5 @@
-import { splitArrayBufferAt } from ".";
-import { equal } from "../equal";
+import { splitArrayBufferAt } from "./split";
+import { equal } from "../equal/equal";
 
 describe("split", () => {
   test("split ArrayBuffer at index smaller than max", () => {

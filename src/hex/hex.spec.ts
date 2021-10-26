@@ -1,4 +1,4 @@
-import { arrayBufferToHex, hexToArrayBuffer } from ".";
+import { arrayBufferToHex, hexToArrayBuffer } from "./hex";
 import { equal } from "../equal/equal";
 
 const BYTE_ARRAY_HEX =

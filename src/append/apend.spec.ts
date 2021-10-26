@@ -1,5 +1,5 @@
-import { appendArrayBuffer } from ".";
-import { equal } from "../equal";
+import { appendArrayBuffer } from "./append";
+import { equal } from "../equal/equal";
 
 describe("append", () => {
   test("append buffer to buffer", () => {

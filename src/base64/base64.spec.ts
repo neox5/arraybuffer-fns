@@ -1,5 +1,5 @@
-import { validatedBase64, arrayBufferToBase64, base64ToArrayBuffer } from ".";
-import { equal } from "../equal";
+import { validatedBase64, arrayBufferToBase64, base64ToArrayBuffer } from "./base64";
+import { equal } from "../equal/equal";
 
 describe("validateBase64", () => {
   test("character set", () => {
