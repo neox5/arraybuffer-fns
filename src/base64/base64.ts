@@ -1,3 +1,4 @@
+import { Base64 } from "../model/base64";
 import { B64_SET, LOOKUP_BASE64 } from "./const";
 
 //           +-------+-------+-------+
@@ -9,7 +10,7 @@ import { B64_SET, LOOKUP_BASE64 } from "./const";
 
 // tslint:disable:no-bitwise
 // ArrayBuffer to Base64
-export function arrayBufferToBase64(ab: ArrayBuffer): string {
+export function arrayBufferToBase64(ab: ArrayBuffer): Base64 {
   const bytes = new Uint8Array(ab);
   const lenBytes = bytes.length;
   const remainder = lenBytes % 3;
@@ -61,7 +62,7 @@ export function arrayBufferToBase64(ab: ArrayBuffer): string {
 //           +-------+-------+-------+
 
 // Base64 to ArrayBuffer
-export function base64ToArrayBuffer(b64: string): ArrayBuffer {
+export function base64ToArrayBuffer(b64: Base64): ArrayBuffer {
   if (!validatedBase64(b64)) {
     throw new Error("not a valid base64 string: " + b64);
   }
@@ -102,7 +103,7 @@ export function base64ToArrayBuffer(b64: string): ArrayBuffer {
   return bytes;
 }
 
-export function validatedBase64(b64: string): boolean {
+export function validatedBase64(b64: Base64): boolean {
   const regex = /^[A-Za-z0-9\+\/]+={0,2}$/; /* eslint-disable-line no-useless-escape */
 
   if (!regex.test(b64)) {

@@ -1,3 +1,6 @@
+// models
+export * from "./model/base64";
+// lib
 export * from "./append/append";
 export * from "./base64/base64";
 export * from "./convert/convert";
